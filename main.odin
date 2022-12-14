@@ -824,8 +824,8 @@ app_draw_frame :: proc(app: ^App) {
 app_run :: proc(app: ^App) {
 	for e: SDL.Event; SDL.PollEvent(&e); {
 		app_event(app, e)
-		app_draw_frame(app)
 	}
+        app_draw_frame(app)
 }
 
 main :: proc() {
