@@ -826,7 +826,6 @@ app_run :: proc(app: ^App) {
 		app_event(app, e)
 		app_draw_frame(app)
 	}
-	vk.DeviceWaitIdle(app.device)
 }
 
 main :: proc() {
@@ -836,6 +835,8 @@ main :: proc() {
 	for !app.quit {
 		app_run(&app)
 	}
+
+        vk.DeviceWaitIdle(app.device)
 }
 
 // SHADER
