@@ -671,7 +671,7 @@ app_init :: proc() -> (app: App) {
 		SDL.WINDOWPOS_CENTERED,
 		DEFAULT_WIDTH,
 		DEFAULT_HEIGHT,
-		{.ALLOW_HIGHDPI, .HIDDEN, .RESIZABLE, .VULKAN},
+		{.ALLOW_HIGHDPI, .HIDDEN, .VULKAN},
 	)
 
 	// Initialise Vulkan Resources
